@@ -1,0 +1,193 @@
+h1 {
+    color: green;
+    position: center;
+}
+body {
+    background-image: url("sunset painted-1.png");
+    background-size: 100% 100%;
+    height: 100%;
+    background-position: center;
+
+    /*background-color: #FA5F55;*/
+}
+#sun {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 30px;
+    right: 100px;
+}
+p {
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    line-height: 1.8;
+}
+
+
+#alyssa {
+    height: 362.9px;
+    width: 242.2px;
+    display: block;
+    margin: 0px auto;
+    border-style: double;
+    border-color: dark turquoise;
+    border-width: 6px;
+    border-radius: 50%;
+    animation: waves 5s ease-in-out alternate infinite;
+
+}
+
+@keyframes waves{
+    to {
+        transform: translateX(50%);
+
+    }
+}
+
+.cloud-exterior {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    border-radius: 50%;
+    box-shadow: 10px 10px gray;
+}
+
+#oval {
+    background-color: white;
+    border-radius: 50%;
+    border-color: transparent;
+    box-shadow: 10px 10px transparent;
+    width: 350px;
+    height: 120px;
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    font-family: lucida handwriting;
+    font-size: 40px;
+
+}
+#circle-1 {
+    left: 200px;
+    height: 130px;
+    border-radius: 50%
+}
+#circle-3 {
+    left: 260px;
+    height: 80px;
+}
+#circle-4 {
+    top: 30px;
+    left: 340px;
+    height: 70px;
+}
+#circle-5 {
+    width: 90px;
+    height: 70px;
+    left: 80px;
+    top: 45px;
+}
+#circle-6 {
+    left: 110px;
+    top: 60px;
+    width: 140px;
+}
+#circle-7 {
+   top: 60px;
+   left:200px;
+   height: 110px;
+   width: 120px;
+}
+#circle-8 {
+    top: 30px;
+    left: 280px;
+    height: 130px;
+    width: 90px;
+}
+#circle-9 {
+    top: 55px;
+    width: 130px;
+    left: 330px;
+}
+
+.raindrops {
+    position: relative;
+    border-radius: 50%;
+    background-color: #6DDAF0;
+    height: 20px;
+    width: 5px;
+    border: solid;
+    border-width: 1px;
+
+}
+#raindrop-1 {
+    bottom: 400px;
+    left: 140px;
+}
+#raindrop-2 {
+    bottom: 420px;
+    left: 200px;
+}
+#raindrop-3 {
+    bottom: 410px;
+    left: 260px;
+}
+#raindrop-4 {
+    bottom: 450px;
+    left: 320px;
+}
+#raindrop-5 {
+    bottom: 500px;
+    left: 380px;
+}
+
+/*.ocean {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 30%;
+    overflow: hidden;
+
+}
+
+.ocean::before {
+   content: "";
+   background-image: url("IMG_5578.jpg");
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.ocean::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background-color: turquoise;
+    left: 0px;
+    border-radius: 100% 50%;
+    animation: waves 5s ease-in-out alternate infinite;
+}
+*/
+/*@keyframes waves{
+    to {
+        transform: translateY(-50%) rotate(40deg);
+        transform: translateY(-50%) rotate(-40deg);
+    }
+}
+*/
+#mountains {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0px;
+    right: px;
+}
+
+

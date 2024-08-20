@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alyssa Introduction</title>
+    <link href="style.css" type = "text/css" rel="stylesheet">
+</head>
+<body>
+<img id="alyssa" src="Alyssa_picture.jpg" alt="Alyssa"/>
+<div id="testing-mountains"></div>
+<img id="sun" src="sun.png" alt="sun"/>
+<p> Alyssa is a first-year Computer Science student from,<br>
+    Alpharetta, GA, who is passionate about promoting the<br>
+    benefits of bilingualism in K-12 education. As president<br>
+    of the National French Honor Society in high school, Alyssa <br>
+    developed and presented curriculums at several K-12 schools<br>
+    which increased enrollment numbers in foreign language<br>
+    programs. In her free time, she enjoys playing tennis,<br>
+    hiking, knitting, and photography.
+<div id="cloud-with-raindrops">
+    <div id="cloud">
+        <div class = "cloud-exterior" id = "circle-1"></div>
+        <div class = "cloud-exterior" id = "circle-2"></div>
+        <div class = "cloud-exterior" id = "circle-3"></div>
+        <div class = "cloud-exterior" id = "circle-4"></div>
+        <div class = "cloud-exterior" id = "circle-5"></div>
+        <div class = "cloud-exterior" id = "circle-6"></div>
+        <div class = "cloud-exterior" id = "circle-7"></div>
+        <div class = "cloud-exterior" id = "circle-8"></div>
+        <div class = "cloud-exterior" id = "circle-9"></div>
+        <button class = "cloud-exterior" id = "oval" type="button">Click to See Sunrise!</button>
+    </div>
+
+    <div id="horizontal-raindrops-1">
+        <div class = "raindrops" id="raindrop-1"></div>
+        <div class = "raindrops" id="raindrop-2"></div>
+        <div class = "raindrops" id="raindrop-3"></div>
+        <div class = "raindrops" id="raindrop-4"></div>
+        <div class = "raindrops" id="raindrop-5"></div>
+    </div>
+</div>
+
+<div class="text-oval"></div>
+<div class="ocean"></div>
+<div class="example_circle"></div>
+<script>
+    // Duplicates rows of raindrops for the cloud
+    const original = document.getElementById('horizontal-raindrops-1');
+    const cloneDropsOne = original.cloneNode(true);
+    cloneDropsOne.id = 'horizontal-raindrops-2';
+    original.parentNode.appendChild(cloneDropsOne);
+
+    const cloneDropsTwo = original.cloneNode(true);
+    cloneDropsTwo.id = 'horizontal-raindrops-3';
+    original.parentNode.appendChild(cloneDropsTwo);
+</script>
+
+<img id="mountains" src="mountains%20and%20house%20como.png" alt="mountains"/>
+
+<script>
+    window.onload = function () {
+           const image = document.getElementById('sun');
+           const startButton = document.getElementById('oval');
+
+           const offsetX = 300;
+           const offsetY = 800;
+
+
+           const radius = 100;
+           const arcLength = Math.PI;
+           const duration = 5000;
+
+           let startTime = null;
+
+           function moveImageArc(time) {
+               if (!startTime) startTime = time;
+               const elapsed = time - startTime;
+
+               const progress = Math.min(elapsed / duration, 1);
+
+               const angle = progress * arcLength;
+
+               const centerX = window.innerWidth - offsetX;
+               const centerY = window.innerHeight - offsetY;
+
+               const x = centerX + radius * Math.cos(angle);
+               const y = centerY + radius * (-1) * Math.sin(angle);
+
+               image.style.left = x + 'px';
+               image.style.top = y + 'px';
+
+               if (progress < 1) {
+                   requestAnimationFrame(moveImageArc);
+               }
+           }
+
+           startButton.onclick = function() {
+               startTime = null;
+               requestAnimationFrame(moveImageArc);
+           };
+       };
+
+
+</script>
+</body>
+</html>
+
